@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    font-family: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  code,
+  pre,
+  kbd {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
+.font-display {
+  font-family: 'Space Grotesk', 'Be Vietnam Pro', system-ui, sans-serif;
+}
+
+@keyframes panelReveal {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes pulseSoft {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.65;
+  }
+}
+
+@keyframes eqBar {
+  0%,
+  100% {
+    transform: scaleY(0.35);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-panel-reveal {
+  animation: panelReveal 0.2s ease-out forwards;
+}
+
+.animate-shake {
+  animation: shake 0.32s ease-in-out;
+}
+
+.animate-pulse-soft {
+  animation: pulseSoft 1.2s ease-in-out infinite;
+}
+
+.eq-bar-1 {
+  animation: eqBar 0.9s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+.eq-bar-2 {
+  animation: eqBar 0.7s ease-in-out 0.2s infinite;
+  transform-origin: bottom;
+}
+
+.eq-bar-3 {
+  animation: eqBar 1.05s ease-in-out 0.35s infinite;
+  transform-origin: bottom;
+}
+
+.safe-bottom {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(120, 120, 114, 0.35);
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(140, 148, 160, 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-panel-reveal,
+  .animate-shake,
+  .animate-pulse-soft,
+  .eq-bar-1,
+  .eq-bar-2,
+  .eq-bar-3 {
+    animation: none !important;
+  }
+}
