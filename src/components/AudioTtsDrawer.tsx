@@ -131,7 +131,7 @@ export const AudioTtsDrawer: React.FC<AudioTtsDrawerProps> = ({
         </div>
 
         <div className="flex-1 space-y-6 overflow-y-auto px-5 py-5">
-          {/* Nhạc nền Chill */}
+          {/* Background chill music */}
           <section className="space-y-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2.5">
@@ -229,7 +229,7 @@ export const AudioTtsDrawer: React.FC<AudioTtsDrawerProps> = ({
             </div>
           </section>
 
-          {/* Hiệu ứng âm thanh SFX */}
+          {/* Sound effects (SFX) */}
           <section className="flex items-center justify-between rounded-xl border border-[#E4E4DF] bg-[#F7F7F5] px-4 py-3 dark:border-[#2B3038] dark:bg-[#121417]">
             <div>
               <h3 className="text-sm font-bold text-[#141413] dark:text-[#F3F4F6]">Hiệu ứng âm thanh (SFX)</h3>
@@ -257,7 +257,7 @@ export const AudioTtsDrawer: React.FC<AudioTtsDrawerProps> = ({
             </button>
           </section>
 
-          {/* Đọc tự động TTS */}
+          {/* Text-to-Speech (TTS) */}
           <section className="space-y-3 border-t border-[#E4E4DF] pt-5 dark:border-[#2B3038]">
             <div className="flex items-center gap-2.5">
               <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-[#168A5B]/12 text-[#168A5B] dark:text-emerald-400">
